@@ -23,35 +23,34 @@ export default function App() {
 
   return (
     <>
-      {isLoading && <LoadingScreen onComplete={handleLoadComplete} />}
-
       <AnimatePresence>
-        {!isLoading && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <CustomCursor />
-            <ScrollProgress />
-            <ParticleBackground />
-
-            <div className="relative z-10">
-              <Navbar />
-              <main>
-                <Hero />
-                <About />
-                <Education />
-                <Skills />
-                <Projects />
-                <Achievements />
-                <Contact />
-              </main>
-              <Footer />
-            </div>
-          </motion.div>
-        )}
+        {isLoading && <LoadingScreen onComplete={handleLoadComplete} />}
       </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: isLoading ? 0.3 : 1 }}
+        transition={{ duration: 0.5 }}
+        className={isLoading ? "pointer-events-none" : ""}
+      >
+        <CustomCursor />
+        <ScrollProgress />
+        <ParticleBackground />
+
+        <div className="relative z-10">
+          <Navbar />
+          <main>
+            <Hero contentReady={!isLoading} />
+            <About />
+            <Education />
+            <Skills />
+            <Projects />
+            <Achievements />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </motion.div>
     </>
   );
 }

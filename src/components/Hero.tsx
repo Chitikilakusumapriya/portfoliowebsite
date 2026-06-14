@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Mail, FolderOpen } from "lucide-react";
 import { typingRoles } from "../data/portfolio";
-import Avatar from "./Avatar";
+import AvatarAssistant from "./AvatarAssistant";
 
-export default function Hero() {
+export default function Hero({ contentReady = true }: { contentReady?: boolean }) {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -105,14 +105,9 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="order-1 flex justify-center lg:order-2"
-        >
-          <Avatar />
-        </motion.div>
+        <div className="order-1 flex justify-center lg:order-2">
+          <AvatarAssistant autoSpeak={contentReady} />
+        </div>
       </div>
 
       <motion.div
