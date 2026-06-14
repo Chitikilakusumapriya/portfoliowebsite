@@ -1,0 +1,40 @@
+Kusumapriya Chitikila - Resume
+================================
+
+Computer Science Undergraduate | Aspiring Software Developer
+Vel Tech University | CGPA: 9.09/10 | Expected Graduation: 2027
+
+CONTACT
+-------
+Email: kusumapriyachitikila@gmail.com
+Phone: +91 8522832751
+Location: Visakhapatnam, Andhra Pradesh, India
+
+EDUCATION
+---------
+Vel Tech University
+B.Tech Computer Science and Engineering (2023-2027) - CGPA: 9.09/10
+
+Narayana Junior College - MPC - 95%
+Narayana School - 98%
+
+SKILLS
+------
+Python, Java, SQL, HTML5, CSS3, JavaScript
+Flask, Spring Boot, Spring MVC, Spring Data JPA, Thymeleaf
+PostgreSQL, SQLAlchemy, Maven, Git, GitHub
+
+PROJECTS
+--------
+1. Smart Trip Planning & Driver Monitoring System
+2. Smart Campus Event Management System
+3. RoadGuard - Road Damage Reporting System
+4. Intelligent Token System
+
+ACHIEVEMENTS
+------------
+- SQL (Basic) - HackerRank
+- Hackathon participation
+- CGPA 9.09/10
+
+Replace this file with your actual resume PDF at public/resume.pdf
